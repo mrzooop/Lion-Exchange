@@ -8,8 +8,12 @@ import { isColumbiaEmail } from "@/lib/columbia-email";
 type Status = "idle" | "sending" | "sent" | "error";
 
 const CALLBACK_ERROR_MESSAGES: Record<string, string> = {
-  missing_code:
+  missing_params:
     "That sign-in link was missing some information. Please request a new one.",
+  invalid_type:
+    "That sign-in link wasn't valid. Please request a new one.",
+  verify_failed:
+    "That sign-in link didn't work — it may have expired or already been used. Request a new one below.",
   exchange_failed:
     "That sign-in link didn't work — it may have expired or already been used. Request a new one below.",
 };
